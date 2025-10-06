@@ -7,7 +7,7 @@ void getprime(int n){//n是数字上限
     prime.push_back(0);
     fill(isprime.begin(),isprime.begin()+n+2,1);
     isprime[1]=0;   
-    for(int i=2,i<=n,i++){
+    for(int i=2;i<=n;i++){
         if(isprime[i])prime.push_back(i);
         for(int j=1;j<=prime.size()&&i*prime[j]<=n;j++){
             isprime[i*prime[j]]=0;
